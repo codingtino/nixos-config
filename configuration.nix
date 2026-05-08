@@ -64,9 +64,9 @@ environment.sessionVariables = {
     pulse.enable = true;
   };
 
-  services.xen-guest = {
-    enable = true;
-  };
+  services.xen-guest.enable = true;
+  services.xen-guest-agent.enable = true;
+
 
   users.users.tino = {
     isNormalUser = true;
