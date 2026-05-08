@@ -64,8 +64,6 @@ environment.sessionVariables = {
     pulse.enable = true;
   };
 
-  services.xen-guest.enable = true;
-#  services.xen-guest-agent.enable = true;
   services.xe-guest-utilities.enable = true;
 
 
