@@ -71,6 +71,9 @@ environment.sessionVariables = {
     isNormalUser = true;
     description = "tino";
     extraGroups = [ "networkmanager" "wheel" "video" "input" ];
+    openssh.authorizedKeys.keys = [
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIK9NGlk8rEOSLKF7MsqoeRa/9idlKkPnl/gPNeuTnHe9 MBP"
+    ];
   };
 
   programs.firefox.enable = true;
