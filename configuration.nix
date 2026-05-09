@@ -39,13 +39,16 @@
 
   console.keyMap = "de";
 
-  services.greetd = {
+  programs.regreet = {
     enable = true;
-    settings.default_session = {
-      command = "${pkgs.tuigreet}/bin/tuigreet --cmd ${pkgs.mangowc}/bin/mango";
-      user = "greeter";
+    font = {
+      name = "Cantarell";
+      size = 16;
     };
   };
+  environment.etc."greetd/environments".text = ''
+    ${pkgs.mangowc}/bin/mango
+  '';
 
 environment.sessionVariables = {
   XKB_DEFAULT_LAYOUT = "de";
